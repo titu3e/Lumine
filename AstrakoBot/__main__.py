@@ -196,8 +196,8 @@ def start(update: Update, context: CallbackContext):
                 )
             elif args[0].lower() == "markdownhelp":
                 IMPORTED["extras"].markdown_help_sender(update)
-            elif args[0].lower() == "disasters":
-                IMPORTED["disasters"].send_disasters(update)
+            elif args[0].lower() == "super_users":
+                IMPORTED["super_users"].send_super_users(update)
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
                 chat = dispatcher.bot.getChat(match.group(1))
@@ -244,6 +244,12 @@ def start(update: Update, context: CallbackContext):
                             InlineKeyboardButton(
                                 text="Source code",
                                 url="https://github.com/Astrako/AstrakoBot",
+                            )
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="Recommended federation",
+                                url="https://t.me/ALTF4Fed",
                             )
                         ],
                     ]

@@ -183,8 +183,10 @@ def info(update: Update, context: CallbackContext):
         else:
             status = status = bot.get_chat_member(chat.id, user.id).status
             if status:
-                if status in {"left", "kicked"}:
+                if status == "left":
                     text += _stext.format("Not here")
+                if status == "kicked":
+                    text += _stext.format("Banned")
                 elif status == "member":
                     text += _stext.format("Detected")
                 elif status in {"administrator", "creator"}:

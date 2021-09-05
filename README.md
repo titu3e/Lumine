@@ -36,6 +36,8 @@ Originally a SaitamaRobot fork, AstrakoBot evolved further and was built to be m
 
 * Support group:  <a href="https://t.me/AstrakoBotSupport" alt="AstrakoBotSupport"> <img src="https://aleen42.github.io/badges/src/telegram.svg" /> </a>
 
+* Recommended federation:  <a href="https://t.me/ALTF4Fed" alt="ALTF4Fed"> <img src="https://img.shields.io/badge/🚫-ALTF4Fed-red" /> </a>
+
 In support group you can ask for help, discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 
