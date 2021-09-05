@@ -1,5 +1,5 @@
 ![Lumine](https://telegra.ph/file/7723370b4e33f2914397a.png)
-# AstrakoBot 
+# Lumine
 <p align="center">
 <a href="https://www.codacy.com/gh/Astrako/AstrakoBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Astrako/AstrakoBot&amp;utm_campaign=Badge_Grade" alt="Codacy Badge">
 <img src="https://app.codacy.com/project/badge/Grade/972e73015aaa4096bf109a79acae8afb" /> </a>
