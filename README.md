@@ -3,24 +3,24 @@
 <p align="center">
 <a href="https://www.codacy.com/gh/Astrako/AstrakoBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Astrako/AstrakoBot&amp;utm_campaign=Badge_Grade" alt="Codacy Badge">
 <img src="https://app.codacy.com/project/badge/Grade/972e73015aaa4096bf109a79acae8afb" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="Libraries.io dependency status for GitHub repo"> <img src="https://img.shields.io/librariesio/github/Astrako/AstrakoBot?style=flat&logo=github&color=red" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="Libraries.io dependency status for GitHub repo"> <img src="https://img.shields.io/librariesio/github/Astrako/AstrakoBot?style=flat&logo=github&color=red" /> </a>
 <a href="http://hits.dwyl.com/Astrako/AstrakoBot" alt="HitCount"> <img src="http://hits.dwyl.com/Astrako/AstrakoBot.svg" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot/network/members" alt="GitHub stars"> <img src="https://img.shields.io/github/stars/Astrako/AstrakoBot?style=flat&logo=github&color=yellow" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot/network/members" alt="GitHub forks"> <img src="https://img.shields.io/github/forks/Astrako/AstrakoBot" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot/network/members" alt="GitHub stars"> <img src="https://img.shields.io/github/stars/Astrako/AstrakoBot?style=flat&logo=github&color=yellow" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot/network/members" alt="GitHub forks"> <img src="https://img.shields.io/github/forks/Astrako/AstrakoBot" /> </a>
 </p>
 <p align="center">
-<a href="https://github.com/Astrako/AstrakoBot" alt="GitHub commit activity"> <img src="https://img.shields.io/github/commit-activity/m/Astrako/AstrakoBot" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot/graphs/contributors" alt="GitHub contributors"> <img src="https://img.shields.io/github/contributors/Astrako/AstrakoBot?style=flat&logo=github" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="GitHub closed pull requests"> <img src="https://img.shields.io/github/issues-pr-closed-raw/Astrako/AstrakoBot?color=success" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="GitHub issues"> <img src="https://img.shields.io/github/issues-raw/Astrako/AstrakoBot?style=flat&logo=github&color=red" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="GitHub closed issues"> <img src="https://img.shields.io/github/issues-closed-raw/Astrako/AstrakoBot?style=flat&logo=github&color=success" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="GitHub commit activity"> <img src="https://img.shields.io/github/commit-activity/m/Astrako/AstrakoBot" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot/graphs/contributors" alt="GitHub contributors"> <img src="https://img.shields.io/github/contributors/Astrako/AstrakoBot?style=flat&logo=github" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="GitHub closed pull requests"> <img src="https://img.shields.io/github/issues-pr-closed-raw/Astrako/AstrakoBot?color=success" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="GitHub issues"> <img src="https://img.shields.io/github/issues-raw/Astrako/AstrakoBot?style=flat&logo=github&color=red" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="GitHub closed issues"> <img src="https://img.shields.io/github/issues-closed-raw/Astrako/AstrakoBot?style=flat&logo=github&color=success" /> </a>
 </p>
 <p align="center">
 <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/made%20with-Python-1f425f.svg?style=flat&logo=python&color=blue" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="Python supported versions"> <img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="pypi version"> <img src="https://img.shields.io/badge/pypi-v13.5-blue" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot" alt="GitHub repo size"> <img src="https://img.shields.io/github/repo-size/Astrako/AstrakoBot" /> </a>
-<a href="https://github.com/Astrako/AstrakoBot/blob/master/LICENSE" alt="GPLv3 license"> <img src="https://img.shields.io/github/license/Astrako/AstrakoBot?style=flat&logo=github&color=success" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="Python supported versions"> <img src="https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="pypi version"> <img src="https://img.shields.io/badge/pypi-v13.5-blue" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot" alt="GitHub repo size"> <img src="https://img.shields.io/github/repo-size/Astrako/AstrakoBot" /> </a>
+<a href="https://github.com/LightLegendXR/AstrakoBot/blob/master/LICENSE" alt="GPLv3 license"> <img src="https://img.shields.io/github/license/Astrako/AstrakoBot?style=flat&logo=github&color=success" /> </a>
 </p>
 <p align="center">
 <a href="" alt="Astrako"> <img src="https://img.shields.io/badge/built%20by-Astrako-blue" /> </a>
@@ -30,13 +30,13 @@
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database.
 
-Originally a SaitamaRobot fork, AstrakoBot evolved further and was built to be more robust. 
+Originally a AstrakoBot fork, Lumine evolved further and was built to be more robust. 
 
-* Bot link:  <a href="https://t.me/AstrakoBot" alt="AstrakoBot"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-AstrakoBot-blue" /> </a>
+* Bot link:  <a href="https://t.me/MissLumineBot" alt="Lumine"> <img src="https://img.shields.io/badge/%F0%9F%A4%96%20-Lumine-yellow" /> </a>
 
-* Support group:  <a href="https://t.me/AstrakoBotSupport" alt="AstrakoBotSupport"> <img src="https://aleen42.github.io/badges/src/telegram.svg" /> </a>
+* Support group:  <a href="https://t.me/LumineBotSupport" alt="LumineBotSupport"> <img src="https://aleen42.github.io/badges/src/telegram.svg" /> </a>
 
-* Recommended federation:  <a href="https://t.me/ALTF4Fed" alt="ALTF4Fed"> <img src="https://img.shields.io/badge/🚫-ALTF4Fed-red" /> </a>
+* Recommended federation:  <a href="https://t.me/LLXRFed/3" alt="LLXRFed"> <img src="https://img.shields.io/badge/🚫-LLXRFed-red" /> </a>
 
 In support group you can ask for help, discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
@@ -44,7 +44,7 @@ In support group you can ask for help, discover/request new features, report bug
 ## How to setup/deploy.
 
 ### Read these notes carefully before proceeding 
- - Edit any mentions of @AstrakoBotSupport to your own support chat
+ - Edit any mentions of @LumineBotSupport to your own support chat
  - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot
  - This repo does not come with technical support, so DO NOT come to us asking help about deploy/console errors
  
@@ -177,7 +177,7 @@ Once you've set up your database and your configuration is complete, simply run 
 
 `python3 -m AstrakoBot`
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [AstrakoBotSupport](https://t.me/AstrakoBotSupport)
+For queries or any issues regarding the bot please open an issue ticket or visit us at [LumineBotSupport](https://t.me/LumineBotSupport)
 
 
 ## Credits
@@ -186,4 +186,4 @@ All original credits go to Paul and AnimeKaizoku, Without their efforts, this fo
 
 Any other authorship/credits can be seen through the commits.
 
-Should any be missing kindly let us know at [AstrakoBotSupport](https://t.me/AstrakoBotSupport) or simply submit a pull request on the readme.
+Should any be missing kindly let us know at [LumineBotSupport](https://t.me/LumineBotSupport) or simply submit a pull request on the readme.
