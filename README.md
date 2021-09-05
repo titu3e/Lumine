@@ -179,7 +179,7 @@ For queries or any issues regarding the bot please open an issue ticket or visit
 
 
 ## Credits
-The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars) and [AnimeKaizoku](https://github.com/AnimeKaizoku)
+The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars), [Astrako](https://github.com/Astrako) and [AnimeKaizoku](https://github.com/AnimeKaizoku)
 All original credits go to Paul and AnimeKaizoku, Without their efforts, this fork would not have been possible!
 
 Any other authorship/credits can be seen through the commits.
