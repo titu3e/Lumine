@@ -1,4 +1,4 @@
-![AstrakoBot](https://i.imgur.com/1oah5E2.jpg)
+![Lumine](https://telegra.ph/file/7723370b4e33f2914397a.png)
 # AstrakoBot 
 <p align="center">
 <a href="https://www.codacy.com/gh/Astrako/AstrakoBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Astrako/AstrakoBot&amp;utm_campaign=Badge_Grade" alt="Codacy Badge">
