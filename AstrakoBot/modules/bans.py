@@ -73,6 +73,8 @@ def ban(update: Update, context: CallbackContext) -> str:
             message.reply_text("Bring a developer user to fight a support user.")
         elif user_id in WHITELIST_USERS:
             message.reply_text("Whitelist users cannot be banned.")
+        elif user_id in [777000, 1087968824]:
+            message.reply_text("Fool! You can't attack Telegram's native tech!")
         else:
             message.reply_text("This user has immunity and cannot be banned.")
         return log_message
