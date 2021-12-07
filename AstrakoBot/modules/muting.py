@@ -43,6 +43,10 @@ def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
         reply = "Can't. Find someone else to mute but not this one."
         return reply
 
+    if user_id in [777000, 1087968824]:
+        reply = "Fool! You can't attack Telegram's native tech!"
+        return reply
+
     return None
 
 
