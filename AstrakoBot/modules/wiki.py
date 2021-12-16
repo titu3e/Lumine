@@ -9,61 +9,55 @@ from wikipedia.exceptions import DisambiguationError, PageError
 
 
 def wiki(update: Update, context: CallbackContext):
+    message = update.effective_message
     chat = update.effective_chat
-    msg = (
-        update.effective_message.reply_to_message
-        if update.effective_message.reply_to_message
-        else update.effective_message
-    )
-    res = ""
-    if msg == update.effective_message:
-        search = msg.text.split(" ", maxsplit=1)[1]
+    msg = ""
+    definition = message.text[len("/wiki ") :]
+    if definition:
+        res = ""
+        search = message.text
+        try:
+            res = wikipedia.summary(search)
+        except DisambiguationError:
+            msg = 'Disambiguated pages found! Adjust your query accordingly'
+        except PageError:
+            msg = 'An error happened getting the wiki page, try again with other term'
+        if res:
+            msg = f"*{search}*\n\n"
+            msg += f"`{res}`\n\n"
+            msg += f"Read more: https://en.wikipedia.org/wiki/{definition}"
+            if len(msg) > 4000:
+                with open("result.txt", "w") as f:
+                    f.write(f"{result}\n\nUwU OwO OmO UmU")
+                with open("result.txt", "rb") as f:
+                    delmsg = context.bot.send_document(
+                        document=f,
+                        filename=f.name,
+                        reply_to_message_id=update.message.message_id,
+                        chat_id=update.effective_chat.id,
+                        parse_mode=ParseMode.HTML,
+                    )
+
+                    try:
+                        for f in glob.glob("result.txt"):
+                            os.remove(f)
+                    except Exception:
+                        pass
+
     else:
-        search = msg.text
-    try:
-        res = wikipedia.summary(search)
-    except DisambiguationError as e:
-        delmsg = update.message.reply_text(
-            "Disambiguated pages found! Adjust your query accordingly.\n<i>{}</i>".format(
-                e
-            ),
-            parse_mode=ParseMode.HTML,
-        )
-    except PageError as e:
-        delmsg = update.message.reply_text(
-            "<code>{}</code>".format(e), parse_mode=ParseMode.HTML
-        )
-    if res:
-        result = f"<b>{search}</b>\n\n"
-        result += f"<i>{res}</i>\n"
-        result += f"""<a href="https://en.wikipedia.org/wiki/{search.replace(" ", "%20")}">Read more...</a>"""
-        if len(result) > 4000:
-            with open("result.txt", "w") as f:
-                f.write(f"{result}\n\nUwU OwO OmO UmU")
-            with open("result.txt", "rb") as f:
-                delmsg = context.bot.send_document(
-                    document=f,
-                    filename=f.name,
-                    reply_to_message_id=update.message.message_id,
-                    chat_id=update.effective_chat.id,
-                    parse_mode=ParseMode.HTML,
-                )
+        msg = 'Give me something to get from Wikipedia, like:\n`/wiki Madrid`'
 
-                try:
-                    for f in glob.glob("result.txt"):
-                        os.remove(f)
-                except Exception:
-                    pass
-
-        else:
-            delmsg = update.message.reply_text(
-                result, parse_mode=ParseMode.HTML, disable_web_page_preview=True
-            )
+    delmsg = message.reply_text(
+        text = msg,
+        parse_mode = ParseMode.MARKDOWN,
+        disable_web_page_preview = True,
+    )
 
     cleartime = get_clearcmd(chat.id, "wiki")
 
     if cleartime:
         context.dispatcher.run_async(delete, delmsg, cleartime.time)
+
 
 
 WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki, run_async=True)
