@@ -116,7 +116,7 @@ def approval(update: Update, context: CallbackContext):
     chat = update.effective_chat
     args = context.args
     user_id = extract_user(message, args)
-    member = chat.get_member(int(user_id))
+    member = chat.get_member(user.id)
     if not user_id:
         message.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user!"
