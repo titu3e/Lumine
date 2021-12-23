@@ -153,6 +153,7 @@ dmypy.json
 .vscode
 
 # Others
+backups/
 *.mp3
 *.mp4
 *.otf

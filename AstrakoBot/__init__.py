@@ -83,6 +83,7 @@ if ENV:
     WEATHER_API = os.environ.get("WEATHER_API", None)
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    BACKUP_PASS = os.environ.get("BACKUP_PASS", True)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -129,6 +130,7 @@ else:
     API_HASH = Config.API_HASH
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
+    DB_NAME = Config.DB_NAME
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
     NO_LOAD = Config.NO_LOAD
@@ -146,6 +148,7 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
     WEATHER_API = Config.WEATHER_API
+    BACKUP_PASS = Config.BACKUP_PASS
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])

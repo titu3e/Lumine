@@ -3,6 +3,7 @@ import json
 import os
 
 
+
 def get_user_list(config, key):
     with open("{}/AstrakoBot/{}".format(os.getcwd(), config), "r") as json_file:
         return json.load(json_file)[key]
@@ -30,6 +31,7 @@ class Config(object):
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
+    DB_NAME = "databasename"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
@@ -68,7 +70,8 @@ class Config(object):
     AI_API_KEY = "awoo"  # For chatbot, get one from https://coffeehouse.intellivoid.net/dashboard
     BL_CHATS = []  # List of groups that you want blacklisted.
     SPAMMERS = None
-
+    
+    BACKUP_PASS = "12345" # The password used for the cron backups zip
 
 class Production(Config):
     LOGGER = True
