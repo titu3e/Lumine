@@ -159,3 +159,4 @@ backups/
 *.otf
 *.png
 *.ttf
+shell_output.txt
