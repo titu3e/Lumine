@@ -387,7 +387,7 @@ def del_blacklist(update: Update, context: CallbackContext):
                     return
                 elif getmode == 5:
                     message.delete()
-                    chat.kick_member(user.id)
+                    chat.ban_member(user.id)
                     bot.sendMessage(
                         chat.id,
                         f"Banned {user.first_name} for using Blacklisted word: {trigger}",
@@ -396,7 +396,7 @@ def del_blacklist(update: Update, context: CallbackContext):
                 elif getmode == 6:
                     message.delete()
                     bantime = extract_time(message, value)
-                    chat.kick_member(user.id, until_date=bantime)
+                    chat.ban_member(user.id, until_date=bantime)
                     bot.sendMessage(
                         chat.id,
                         f"Banned {user.first_name} until '{value}' for using Blacklisted word: {trigger}!",
