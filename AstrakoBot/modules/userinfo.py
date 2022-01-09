@@ -297,6 +297,8 @@ def info(update: Update, context: CallbackContext):
             if mod_info:
                 text += "\n\n" + mod_info
 
+        text += "\n\n" + biome(user.id)
+
         if INFOPIC:
             try:
                 profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
@@ -483,7 +485,7 @@ def gdpr(update: Update, context: CallbackContext):
                                         parse_mode=ParseMode.MARKDOWN)
 
 
-def __user_info__(user_id):
+def biome(user_id):
     bio = html.escape(sql.get_user_bio(user_id) or "")
     me = html.escape(sql.get_user_me_info(user_id) or "")
     result = ""
