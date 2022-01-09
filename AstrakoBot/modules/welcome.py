@@ -263,8 +263,9 @@ def new_member(update: Update, context: CallbackContext):
                 update.effective_message.reply_text(
                     "Thanks for adding me! Join https://t.me/AstrakoBotSupport for support.",
                     reply_to_message_id=reply,
+                    disable_web_page_preview=True,
                 )
-                continue
+                
                 bot.send_message(
                     JOIN_LOGGER,
                     "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>".format(
@@ -272,6 +273,7 @@ def new_member(update: Update, context: CallbackContext):
                     ),
                     parse_mode=ParseMode.HTML,
                 )
+                continue
             else:
                 buttons = sql.get_welc_buttons(chat.id)
                 keyb = build_keyboard(buttons)
