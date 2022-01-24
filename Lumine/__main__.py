@@ -1,4 +1,5 @@
 import importlib
+import random
 import time
 import re
 from sys import argv
@@ -73,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
+Hi {}, my name is Zhongli! 
 I am a Genshin Impact themed group management bot.
 
 You can find my list of available commands with /help.
@@ -98,12 +99,12 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-Lumine_IMG = "https://telegra.ph/file/7723370b4e33f2914397a.png"
+Lumine_IMG = "https://telegra.ph/file/d9fd3e727627b10179308.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Lumine is hosted on its own server and doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, @LightLegendXR
-There are two ways of supporting him; [PayPal](paypal.me/StopLookingAtMyPic)."""
+Lumine is hosted on its own server and require donations as of now but \
+You can donate to the original writer of the Base code, @Kaneki_op
+There are two ways of supporting him; [Group](https://t.me/manhwarecommend)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -222,7 +223,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Add Lumine to your group",
+                                text="Add Zhongli to your group",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -231,7 +232,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="Support Group",
-                                url=f"https://t.me/LumineBotSupport",
+                                url=f"https://t.me/manhwarecommend",
                             ),
                         ],
                         [
