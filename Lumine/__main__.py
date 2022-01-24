@@ -91,7 +91,7 @@ the things I can help you with.
  • /donate: information on how to donate!
  • /settings:
    • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+   • in a group: will redirect you to pm, with all that chat's settings[.](https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4)
 {}
 And the following:
 """.format(
@@ -238,19 +238,19 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="Getting started guide",
-                                url="https://t.me/OnePunchUpdates/29",
+                                url="https://zhongli-setup.readthedocs.io/en/latest/",
                             )
                         ],
                         [
                             InlineKeyboardButton(
-                                text="Source code",
-                                url="https://github.com/LightLegendXR/Lumine",
+                                text="Website",
+                                url="https://zhongli-tele.netlify.app/",
                             )
                         ],
                         [
                             InlineKeyboardButton(
-                                text="Recommended federation",
-                                url="https://t.me/LLXRFed/3",
+                                text="Recommended Bot",
+                                url="https://t.me/nezuko13_bot",
                             )
                         ],
                     ]
