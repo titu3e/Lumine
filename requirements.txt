@@ -1,3 +1,4 @@
+pyrogram
 future
 emoji
 lxml
