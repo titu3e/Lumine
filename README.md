@@ -1,18 +1,18 @@
-![Lumine](https://telegra.ph/file/7723370b4e33f2914397a.png)
-# Lumine
+![Zhongli](https://images8.alphacoders.com/111/1110665.jpg)
+# Zhongli
 <p align="center">
 <a href="https://www.codacy.com/gh/Astrako/Lumine/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Astrako/Lumine&amp;utm_campaign=Badge_Grade" alt="Codacy Badge">
 <img src="https://app.codacy.com/project/badge/Grade/972e73015aaa4096bf109a79acae8afb" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine" alt="Libraries.io dependency status for GitHub repo"> <img src="https://img.shields.io/librariesio/github/Astrako/Lumine?style=flat&logo=github&color=red" /> </a>
+<a href="https://github.com/titu3e/Zhongli" alt="Libraries.io dependency status for GitHub repo"> <img src="https://img.shields.io/librariesio/github/Astrako/Lumine?style=flat&logo=github&color=red" /> </a>
 <a href="http://hits.dwyl.com/Astrako/Lumine" alt="HitCount"> <img src="http://hits.dwyl.com/Astrako/Lumine.svg" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine/network/members" alt="GitHub stars"> <img src="https://img.shields.io/github/stars/Astrako/Lumine?style=flat&logo=github&color=yellow" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine/network/members" alt="GitHub forks"> <img src="https://img.shields.io/github/forks/Astrako/Lumine" /> </a>
+<a href="https://github.com/titu3e/Zhongli/network/members" alt="GitHub stars"> <img src="https://img.shields.io/github/stars/Astrako/Lumine?style=flat&logo=github&color=yellow" /> </a>
+<a href="https://github.com/titu3e/Zhongli/network/members" alt="GitHub forks"> <img src="https://img.shields.io/github/forks/Astrako/Lumine" /> </a>
 </p>
 <p align="center">
-<a href="https://github.com/LightLegendXR/Lumine" alt="GitHub commit activity"> <img src="https://img.shields.io/github/commit-activity/m/Astrako/Lumine" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine/graphs/contributors" alt="GitHub contributors"> <img src="https://img.shields.io/github/contributors/Astrako/Lumine?style=flat&logo=github" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine" alt="GitHub closed pull requests"> <img src="https://img.shields.io/github/issues-pr-closed-raw/Astrako/Lumine?color=success" /> </a>
-<a href="https://github.com/LightLegendXR/Lumine" alt="GitHub issues"> <img src="https://img.shields.io/github/issues-raw/Astrako/Lumine?style=flat&logo=github&color=red" /> </a>
+<a href="https://github.com/titu3e/Zhongli" alt="GitHub commit activity"> <img src="https://img.shields.io/github/commit-activity/m/Astrako/Lumine" /> </a>
+<a href="https://github.com/titu3e/Zhongli/graphs/contributors" alt="GitHub contributors"> <img src="https://img.shields.io/github/contributors/Astrako/Lumine?style=flat&logo=github" /> </a>
+<a href="https://github.com/titu3e/Zhongli" alt="GitHub closed pull requests"> <img src="https://img.shields.io/github/issues-pr-closed-raw/Astrako/Lumine?color=success" /> </a>
+<a href="https://github.com/titu3e/Zhongli" alt="GitHub issues"> <img src="https://img.shields.io/github/issues-raw/Astrako/Lumine?style=flat&logo=github&color=red" /> </a>
 <a href="https://github.com/LightLegendXR/Lumine" alt="GitHub closed issues"> <img src="https://img.shields.io/github/issues-closed-raw/Astrako/Lumine?style=flat&logo=github&color=success" /> </a>
 </p>
 <p align="center">
