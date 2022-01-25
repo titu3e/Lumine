@@ -258,7 +258,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already[✨](https://c.tenor.com/m3OLn07Ino8AAAPo/mihoyo-genshinimpact.mp4) !\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I'm awake already !\n<b>Haven't slept since:</b> <code>{}</code> [✨](https://c.tenor.com/m3OLn07Ino8AAAPo/mihoyo-genshinimpact.mp4)".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
