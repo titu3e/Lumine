@@ -82,7 +82,7 @@ You can find my list of available commands with /help.
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a modular group management bot and help admins to manage their groups. Have a look at the following for an idea of some [of](https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4) \
+I'm a modular group management bot and help admins to manage their groups. Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
@@ -91,13 +91,16 @@ the things I can help you with.
  • /donate: information on how to donate!
  • /settings:
    • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings[.](https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4)
+   • in a group: will redirect you to pm, with all that chat's settings.
 {}
 And the following:
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
+
+HELP_IMG = "https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4"
+
 
 Lumine_IMG = "https://telegra.ph/file/d9fd3e727627b10179308.jpg"
 
