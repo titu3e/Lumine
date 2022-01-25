@@ -82,7 +82,7 @@ You can find my list of available commands with /help.
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a modular group management bot and help admins to manage their groups. Have a look at the following for an idea of some of \
+I'm a modular group management bot and help admins to manage their groups. Have a look at the following for an idea of some [of](https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4) \
 the things I can help you with.
 
 *Main* commands available:
@@ -258,7 +258,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I'm awake already[✨](https://c.tenor.com/m3OLn07Ino8AAAPo/mihoyo-genshinimpact.mp4) !\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -368,7 +368,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"Contact me in PM to get help of {module.capitalize()} [✨](https://c.tenor.com/j4NZHesJ4ooAAAPo/zhongli-zhongli-edit.mp4)",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -384,7 +384,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Contact me in PM to get the list of possible commands.[✨](https://c.tenor.com/j4NZHesJ4ooAAAPo/zhongli-zhongli-edit.mp4) ",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
