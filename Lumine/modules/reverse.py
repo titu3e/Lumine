@@ -13,6 +13,8 @@ from telegram.ext import CallbackContext, run_async
 
 from Lumine import dispatcher
 from Lumine.modules.disable import DisableAbleCommandHandler
+from Lumine.modules.sql.clear_cmd_sql import get_clearcmd
+from Lumine.modules.helper_funcs.misc import delete
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36"
@@ -70,7 +72,7 @@ def reverse(update: Update, context: CallbackContext):
             if HE.reason == "Not Found":
                 msg.reply_text("Image not found.")
                 return
-            if HE.reason == "Forbidden":
+            elif HE.reason == "Forbidden":
                 msg.reply_text(
                     "Couldn't access the provided link, The website might have blocked accessing to the website by bot or the website does not existed."
                 )
@@ -112,29 +114,31 @@ def reverse(update: Update, context: CallbackContext):
         os.remove(imagename)
         match = ParseSauce(fetchUrl + "&hl=en")
         guess = match["best_guess"]
-        if match["override"] and match["override"] != "":
+        if match["override"] and not match["override"] == "":
             imgspage = match["override"]
         else:
             imgspage = match["similar_images"]
 
         if guess and imgspage:
-            xx.edit_text(
+            deletion(update, context, xx.edit_text(
                 f"[{guess}]({fetchUrl})\nProcessing...",
                 parse_mode="Markdown",
                 disable_web_page_preview=True,
-            )
+            ))
         else:
-            xx.edit_text("Couldn't find anything.")
+            deletion(update, context, xx.edit_text("Couldn't find anything."))
+
             return
 
         images = scam(imgspage, lim)
         if len(images) == 0:
-            xx.edit_text(
+            deletion(update, context, xx.edit_text(
                 f"[{guess}]({fetchUrl})\n[Visually similar images]({imgspage})"
                 "\nCouldn't fetch any images.",
                 parse_mode="Markdown",
                 disable_web_page_preview=True,
-            )
+            ))
+
             return
 
         imglinks = []
@@ -142,12 +146,12 @@ def reverse(update: Update, context: CallbackContext):
             lmao = InputMediaPhoto(media=str(link))
             imglinks.append(lmao)
 
-        bot.send_media_group(chat_id=chat_id, media=imglinks, reply_to_message_id=rtmid)
-        xx.edit_text(
+        deletion(update, context, xx.reply_media_group(media=imglinks))
+        deletion(update, context, xx.edit_text(
             f"[{guess}]({fetchUrl})\n[Visually similar images]({imgspage})",
             parse_mode="Markdown",
             disable_web_page_preview=True,
-        )
+        ))
     except TelegramError as e:
         print(e)
     except Exception as exception:
@@ -204,8 +208,16 @@ def scam(imgspage, lim):
     return imglinks
 
 
+def deletion(update: Update, context: CallbackContext, delmsg):
+    chat = update.effective_chat
+    cleartime = get_clearcmd(chat.id, "reverse")
+
+    if cleartime:
+        context.dispatcher.run_async(delete, delmsg, cleartime.time)
+
+
 REVERSE_HANDLER = DisableAbleCommandHandler(
-    "reverse", reverse, pass_args=True, admin_ok=True, run_async=True
+    "reverse", reverse, admin_ok=True, run_async=True
 )
 
 dispatcher.add_handler(REVERSE_HANDLER)
