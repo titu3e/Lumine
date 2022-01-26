@@ -280,6 +280,15 @@ def start(update: Update, context: CallbackContext):
                 uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                  [ 
+                       InlineKeyboardButton(
+                             text="Want Me?",
+                             url="https://t.me/WaifuGacha_bot/?start=Uo9fRdOYEY8mOpOrPcCqOJ5cOp5cDJWsPJ9cOJOsOpGmOcGoCJSrDo9z")
+                     ] 
+                ]
+            ),
         )
 
 
@@ -386,7 +395,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_video(
-                f"Contact me in PM to get help of {module.capitalize()} ✨",
+                random.choice(HELP_IMG),caption= f"Contact me in PM to get help of {module.capitalize()} ✨",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -401,8 +410,8 @@ def get_help(update: Update, context: CallbackContext):
                 ),
             )
             return
-        update.effective_message.reply_text(
-            random.choice(HELP_IMG)"Contact me in PM to get the list of possible commands.✨",
+        update.effective_message.reply_video(
+            random.choice(HELP_IMG), caption= "Contact me in PM to get the list of possible commands.✨",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
