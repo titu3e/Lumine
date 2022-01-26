@@ -103,8 +103,7 @@ HELP_IMG = "https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4"
 
 LUM_ING= (
           "https://te.legra.ph/file/e690403cba45611ca7daf.mp4",
-          "https://te.legra.ph/file/50bf031019f63482031df.mp4",
-          "https://c.tenor.com/M25TmVGyi0QAAAAC/zhongling.gif",    
+          "https://te.legra.ph/file/50bf031019f63482031df.mp4",    
           )
 
 Lumine_IMG = "https://telegra.ph/file/d9fd3e727627b10179308.jpg"
