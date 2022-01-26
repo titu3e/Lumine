@@ -265,14 +265,13 @@ def start(update: Update, context: CallbackContext):
                 ),
             )
     else:
-        update.effective_message.reply_photo (
-                random.choice(LUM_IMG), caption= "<b>Yes,Darling I'm alive! Haven't sleep since</b>: <code>{}</code>".format(
+          update.effective_message.reply_photo(
+            "https://te.legra.ph/file/e690403cba45611ca7daf.mp4", caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
- 
             ),
-            
             parse_mode=ParseMode.HTML,
-         
+        )
+
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
