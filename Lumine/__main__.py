@@ -261,7 +261,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            "https://te.legra.ph/file/e690403cba45611ca7daf.mp4
+            "https://te.legra.ph/file/e690403cba45611ca7daf.mp4"
         ),
         update.effective_message.reply_text(
             "I'm awake already !\n<b>Haven't slept since:</b> <code>{}</code>".format(
