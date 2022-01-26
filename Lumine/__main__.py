@@ -101,6 +101,12 @@ And the following:
 
 HELP_IMG = "https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4"
 
+ LUM_ING= (
+          "https://te.legra.ph/file/e690403cba45611ca7daf.mp4",
+          "https://te.legra.ph/file/50bf031019f63482031df.mp4",
+          "https://c.tenor.com/M25TmVGyi0QAAAAC/zhongling.gif"    
+          )
+
 
 Lumine_IMG = "https://telegra.ph/file/d9fd3e727627b10179308.jpg"
 
@@ -260,17 +266,15 @@ def start(update: Update, context: CallbackContext):
                 ),
             )
     else:
-      update.effective_message.reply_animation(
-                random.choice(LUM_IMG), caption= "<b>Yes,Darling I'm alive! Haven't sleep since</b>: <code>{}</code>".format(
+              first_name = update.effective_user.first_name
+        update.effective_message.reply_animation(
+                random.choice(NEKO_IMG), caption= "<b>Yes,Darling I'm alive! Haven't sleep since</b>: <code>{}</code>".format(
                 uptime
+ 
+            ),
+            
             parse_mode=ParseMode.HTML,
-        )
-
-          LUM_ING= (
-          "https://te.legra.ph/file/e690403cba45611ca7daf.mp4",
-          "https://te.legra.ph/file/50bf031019f63482031df.mp4",
-          "https://c.tenor.com/M25TmVGyi0QAAAAC/zhongling.gif"    
-          )
+         
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
