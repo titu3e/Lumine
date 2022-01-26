@@ -265,7 +265,7 @@ def start(update: Update, context: CallbackContext):
                 ),
             )
     else:
-          update.effective_message.reply_photo(
+          update.effective_message.reply_video(
             "https://te.legra.ph/file/e690403cba45611ca7daf.mp4", caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
