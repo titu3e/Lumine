@@ -267,7 +267,7 @@ def start(update: Update, context: CallbackContext):
     else:
               first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
-                random.choice(NEKO_IMG), caption= "<b>Yes,Darling I'm alive! Haven't sleep since</b>: <code>{}</code>".format(
+                random.choice(LUM_IMG), caption= "<b>Yes,Darling I'm alive! Haven't sleep since</b>: <code>{}</code>".format(
                 uptime
  
             ),
