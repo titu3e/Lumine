@@ -99,11 +99,22 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-HELP_IMG = "https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4"
+HELP_IMG = (
+    "https://te.legra.ph/file/9b3f9cff62cda296279cc.mp4",
+    "https://te.legra.ph/file/3c0d8ff793282f2baab52.mp4",
+    "https://te.legra.ph/file/bc228cffc7a7f49f99b6b.mp4",
+    "https://te.legra.ph/file/497272cee475c5530c437.mp4",
+    "https://te.legra.ph/file/29b7ec90c705afe86b1a3.mp4",
+    "https://te.legra.ph/file/4f427193b86182fa07678.mp4",
+)
 
 LUM_IMG= (
+          "https://te.legra.ph/file/f8f4c345365bac6de0993.mp4",
           "https://te.legra.ph/file/e690403cba45611ca7daf.mp4",
-          "https://te.legra.ph/file/50bf031019f63482031df.mp4",    
+          "https://te.legra.ph/file/50bf031019f63482031df.mp4",
+          "https://te.legra.ph/file/b7ec631475e45dc946857.mp4",
+          "https://te.legra.ph/file/f38d064f1f2bd50e3e037.mp4",
+          "https://te.legra.ph/file/3999a427582d5e90db5bf.mp4",
           )
 
 Lumine_IMG = "https://telegra.ph/file/d9fd3e727627b10179308.jpg"
@@ -374,8 +385,8 @@ def get_help(update: Update, context: CallbackContext):
     if chat.type != chat.PRIVATE:
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
-            update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()} [✨](https://c.tenor.com/j4NZHesJ4ooAAAPo/zhongli-zhongli-edit.mp4)",
+            update.effective_message.reply_video(
+                f"Contact me in PM to get help of {module.capitalize()} ✨",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -391,7 +402,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.[✨](https://c.tenor.com/j4NZHesJ4ooAAAPo/zhongli-zhongli-edit.mp4) ",
+            random.choice(HELP_IMG)"Contact me in PM to get the list of possible commands.✨",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
