@@ -222,6 +222,6 @@ REVERSE_HANDLER = DisableAbleCommandHandler(
 
 dispatcher.add_handler(REVERSE_HANDLER)
 
-__mod_name__ = "Translator"
-__command_list__ = ["tr", "tl"]
-__handlers__ = [TRANSLATE_HANDLER]
+__mod_name__ = "Reverse"
+__command_list__ = ["reverse", "grs"]
+__handlers__ = [REVERSE_HANDLER]
