@@ -217,7 +217,11 @@ def deletion(update: Update, context: CallbackContext, delmsg):
 
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
-    "reverse", reverse, admin_ok=True, run_async=True
+    ["reverse","grs"], reverse, admin_ok=True, run_async=True
 )
 
 dispatcher.add_handler(REVERSE_HANDLER)
+
+__mod_name__ = "Translator"
+__command_list__ = ["tr", "tl"]
+__handlers__ = [TRANSLATE_HANDLER]
