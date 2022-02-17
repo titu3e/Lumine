@@ -399,8 +399,6 @@ def adminlist(update: Update, context: CallbackContext):
     administrators = bot.getChatAdministrators(chat_id)
     text = "Admins in <b>{}</b>:".format(html.escape(update.effective_chat.title))
 
-    bot_admin_list = []
-
     for admin in administrators:
         user = admin.user
         status = admin.status
@@ -415,19 +413,12 @@ def adminlist(update: Update, context: CallbackContext):
                 )
             )
 
-        if user.is_bot:
-            bot_admin_list.append(name)
-            administrators.remove(admin)
-            continue
-
-        # if user.username:
-        #    name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n 👑 Creator:"
             text += "\n<code> • </code>{}\n".format(name)
 
-            if custom_title:
-                text += f"<code> ┗━ {html.escape(custom_title)}</code>\n"
+        # if user.username:
+        #    name = escape_markdown("@" + user.username)
 
     text += "\n🔱 Admins:"
 
@@ -474,10 +465,6 @@ def adminlist(update: Update, context: CallbackContext):
         for admin in value:
             text += "\n<code> • </code>{}".format(admin)
         text += "\n"
-
-    text += "\n🤖 Bots:"
-    for each_bot in bot_admin_list:
-        text += "\n<code> • </code>{}".format(each_bot)
 
     try:
         msg.edit_text(text, parse_mode=ParseMode.HTML)
