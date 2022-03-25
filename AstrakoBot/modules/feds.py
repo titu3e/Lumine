@@ -548,7 +548,11 @@ def fed_admin(update: Update, context: CallbackContext):
     else:
         text += "\n🔱 Admin:\n"
         for x in members:
-            user = bot.get_chat(x)
+            try:
+                user = bot.get_chat(x)
+            except BadRequest as excp:
+                if excp.message in FBAN_ERRORS:
+                    pass
             name = user.first_name or 'Deleted'
             text += " • {}\n".format(mention_html(user.id, user.first_name))
 
