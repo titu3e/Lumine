@@ -1578,6 +1578,7 @@ def fed_chats(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     chat = update.effective_chat
     user = update.effective_user
+    chat_name = ""
 
     if chat.type == "private":
         send_message(
@@ -1619,7 +1620,10 @@ def fed_chats(update: Update, context: CallbackContext):
                 )
             )
             continue
-        text += " • {} (<code>{}</code>)\n".format(chat_name, chats)
+        except BadRequest as excp:
+            if excp.message in FBAN_ERRORS:
+                pass
+            text += " • {} (<code>{}</code>)\n".format(chat_name, chats)
 
     try:
         update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
