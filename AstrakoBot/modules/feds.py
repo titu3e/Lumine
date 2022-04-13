@@ -957,48 +957,48 @@ def fed_ban(update: Update, context: CallbackContext):
 							html=True)
 		"""
 
-        # Fban for fed subscriber
-        subscriber = list(sql.get_subscriber(fed_id))
-        if len(subscriber) != 0:
-            for fedsid in subscriber:
-                all_fedschat = sql.all_fed_chats(fedsid)
-                for fedschat in all_fedschat:
-                    try:
-                        bot.ban_chat_member(fedschat, fban_user_id)
-                    except BadRequest as excp:
-                        if excp.message in FBAN_ERRORS:
-                            try:
-                                dispatcher.bot.getChat(fedschat)
-                            except Unauthorized:
-                                targetfed_id = sql.get_fed_id(fedschat)
-                                sql.unsubs_fed(fed_id, targetfed_id)
-                                LOGGER.info(
-                                    "Chat {} has unsubbed from the fed {} because I was kicked".format(
-                                        fedschat, info["fname"]
-                                    )
-                                )
-                                continue
-                        elif excp.message == "User_id_invalid":
-                            break
-                        else:
-                            LOGGER.warning(
-                                "Unable to execute fban on {} because: {}".format(
-                                    fedschat, excp.message
+    # Fban for fed subscriber
+    subscriber = list(sql.get_subscriber(fed_id))
+    if len(subscriber) != 0:
+        for fedsid in subscriber:
+            all_fedschat = sql.all_fed_chats(fedsid)
+            for fedschat in all_fedschat:
+                try:
+                    bot.ban_chat_member(fedschat, fban_user_id)
+                except BadRequest as excp:
+                    if excp.message in FBAN_ERRORS:
+                        try:
+                            dispatcher.bot.getChat(fedschat)
+                        except Unauthorized:
+                            targetfed_id = sql.get_fed_id(fedschat)
+                            sql.unsubs_fed(fed_id, targetfed_id)
+                            LOGGER.info(
+                                "Chat {} has unsubbed from the fed {} because I was kicked".format(
+                                    fedschat, info["fname"]
                                 )
                             )
-                    except TelegramError:
-                        pass
+                            continue
+                    elif excp.message == "User_id_invalid":
+                        break
+                    else:
+                        LOGGER.warning(
+                            "Unable to execute fban on {} because: {}".format(
+                                fedschat, excp.message
+                            )
+                        )
+                except TelegramError:
+                    pass
     # if chats_in_fed == 0:
     #    send_message(update.effective_message, "Fedban affected 0 chats. ")
     # elif chats_in_fed > 0:
     #    send_message(update.effective_message,
     #                 "Fedban affected {} chats. ".format(chats_in_fed))
     
-        if silent:
-            if message.reply_to_message:
-                message.reply_to_message.delete()
-            message.delete()
-        return
+    if silent:
+        if message.reply_to_message:
+            message.reply_to_message.delete()
+        message.delete()
+    return
 
 
 
