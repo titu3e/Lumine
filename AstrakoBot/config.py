@@ -30,7 +30,7 @@ class Config(object):
     ALLOW_CHATS = True
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = "postgres://bgsoktfq:xZCgZwUdh3d3NTRgC3tzsaB6kn6ixwn-@abul.db.elephantsql.com/bgsoktfq"  # needed for any database modules
     DB_NAME = "databasename"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
