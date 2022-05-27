@@ -31,7 +31,7 @@ class Config(object):
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "postgres://bgsoktfq:xZCgZwUdh3d3NTRgC3tzsaB6kn6ixwn-@abul.db.elephantsql.com/bgsoktfq"  # needed for any database modules
-    DB_NAME = "databasename"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
+    DB_NAME = "bgsoktfq"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
